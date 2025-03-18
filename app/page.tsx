@@ -1,8 +1,8 @@
 "use client";
 
-import Highcharts from "highcharts";
 import { HighchartsReact } from "highcharts-react-official";
-import "highcharts/modules/sankey";
+import Highcharts from "highcharts/es-modules/masters/highcharts.src.js";
+import "highcharts/es-modules/Series/Sankey/SankeySeries.js";
 import "highcharts/css/highcharts.css";
 import React, { useRef } from "react";
 import "./page.css";
@@ -195,7 +195,7 @@ const options: Highcharts.Options = {
 	],
 };
 
-export default function Page(props: HighchartsReact.Props) {
+export default function Page() {
 	const chartComponentRef = useRef<HighchartsReact.RefObject>(null);
 
 	return (
